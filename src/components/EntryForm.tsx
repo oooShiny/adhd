@@ -146,7 +146,7 @@ const EntryForm: React.FC<EntryFormProps> = ({ onSave, onCancel }) => {
         rationalResponse
       };
 
-      const savedEntry = await saveEntry(newEntry);
+      await saveEntry(newEntry); // Save entry without storing the return value
       
       if (onSave) {
         onSave(newEntry);
